@@ -6,6 +6,8 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://zibasan.github.io",
+  base: "/markdown-code-editor-wiki",
   integrations: [
     starlight({
       title: "Markdown Editor Docs",
@@ -39,7 +41,7 @@ export default defineConfig({
           label: "Guides",
           items: [
             // Each item here is one entry in the navigation menu.
-            { label: "Example Guide", link: "guides/example" },
+            { label: "Example Guide", link: "/guides/example/" },
           ],
         },
         {
