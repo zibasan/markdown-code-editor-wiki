@@ -11,6 +11,7 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "Markdown Editor Docs",
+      customCss: ["./src/styles/custom.css"],
       defaultLocale: "root",
       locales: {
         root: {
@@ -26,16 +27,14 @@ export default defineConfig({
         {
           icon: "github",
           label: "GitHub",
-          href: "https://github.com/withastro/starlight",
+          href: "https://github.com/zibasan/markdown-editor",
         },
       ],
       sidebar: [
+        { label: "ホーム", link: "/" },
         {
-          label: "Getting Started",
-          items: [
-            // Each item here is one entry in the navigation menu.
-            { label: "Home", link: "/" },
-          ],
+          label: "始めましょう",
+          autogenerate: { directory: "getting-started" },
         },
         {
           label: "Guides",
